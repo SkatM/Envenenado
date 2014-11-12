@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Envenenados</title>
+
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="jquery.mobile-1.4.4.css">
+		<script src="jquery-1.11.1.min.js"></script>
+		<script src="js/script2.js"></script>
+		<script src="js/script.js"></script>
+		<script src="jquery.mobile-1.4.4.js"></script>
+	</head>
+
+	<body>
+
+
+				<!-- panel -->
+				<div data-role="panel" id="ev-main-panel">
+					<p>----</p>
+					<a href="#ev-portada">portada</a><br />
+					<a href="#ev-pj">pj</a><br />
+					<a href="#ev-daga-tripulacion">La Daga y su tripulaci&oacute;n</a>
+				</div>
+
+
+		<!-- ########  PORTADA  ######## -->
+		<div data-role="page" id="ev-portada">
+				<!-- header -->
+				<div data-role="header">
+					<a href="#ev-main-panel" class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow">panel</a>
+				</div>
+				<!-- main -->
+				<div data-role="main" class="ui-content">
+					<a class="ui-link" href="" > <img src="img/logo_prueba.png"> </a> 
+					<p>
+						<h2>Webapp Envenenado</h2>
+						Creación de PJ, Barco y tripulación
+					</p>
+					<a class="ui-link" href="" > <img src="img/logo_prueba.png"> </a> 
+					<p>
+						Diseño: José Valverde (link) <br />
+						Desarrollo: Miguel Valverde
+					</p>
+					<p>
+						Gracias a:<br />
+						Patrón (link), Patrón (link), Patrón (link)<br />
+						Patrón (link), Patrón (link), Patrón (link)<br />
+						Patrón (link), Patrón (link), Patrón (link)<br />
+						Patrón (link), Patrón (link), Patrón (link)<br />
+					</p>
+					<p>
+						App no oficial. Envenenado: un juego de rol de piratas. &copy; 2013 Ediciones conBarba. Creado por Vincent D. Baker.
+					</p>
+				</div>
+				<!-- footer -->
+		<!--	<div data-role="footer">
+				</div>
+		-->
+		</div>
+
+
+		<!-- ######## PJ ######## -->
+		<div data-role="page" id="ev-pj">
+				<!-- header -->
+				<div data-role="header">
+					<a href="#ev-main-panel" class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow">panel</a>
+					<h1>Creaci&oacute;n del personaje</h1>
+				</div>
+				<!-- main -->
+				<div data-role="main" class="ui-content">
+					<!-- nombre -->
+					<div>
+						<h2>Nombre</h2>
+						<div data-role="fieldcontain">
+							<label for="ev-pj-form-nombre">Escribe el nombre por el que es conocido tu pirata.</label>
+							<input type="text" name="ev-pj-form-nombre" />
+						</div>
+					</div>
+					<!-- cargo -->
+					<div>
+						<h2>Cargo</h2>
+						<div data-role="fieldcontain">
+							<label for="ev-pj-form-cargo">Elije el cargo de tu personaje bajo el mando de Azufre Jack.</label>
+							<select name="ev-pj-form-cargo">
+								<option value="Contramaestre">Contramaestre</option>
+								<option value="Grumete">Grumete</option>
+								<option value="Carpintero">Carpintero</option>
+								<option value="Artillero mayor">Artillero mayor</option>
+								<option value="Oficial de intendencia">Oficial de intendencia</option>
+								<option value="Navegante">Navegante</option>
+								<option value="Marinero">Marinero</option>
+								<option value="Cirujano">Cirujano</option>
+							</select>
+						</div>
+						<div data-role="fieldcontain">
+							<label for="ev-pj-form-segundoacargo">¿Es segundo al cargo?</label>
+							<select name="ev-pj-form-segundoacargo">
+								<option value="si">S&iacute;</option>
+								<option value="no">No</option>
+							</select>
+						</div>
+					</div>
+					<!-- pecados -->
+					<div>
+						<h2>Pecados</h2>
+						<div>¿Cu&aacute;les ha cometido tu personaje? Elige uno, algunos, todos o ninguno.</div>
+						<div>
+							<div id="ev-pj-form-pecados-adulterio" class="ev-double-checkbox ev-double-checkbox-pecados-0">Adulterio</div>
+							<div id="ev-pj-form-pecados-asesinato" class="ev-double-checkbox ev-double-checkbox-pecados-0">Asesinato</div>
+							<div id="ev-pj-form-pecados-blasfemia" class="ev-double-checkbox ev-double-checkbox-pecados-0">Blasfemia</div>
+							<div id="ev-pj-form-pecados-idolatria" class="ev-double-checkbox ev-double-checkbox-pecados-0">Idolatr&iacute;a</div>
+							<div id="ev-pj-form-pecados-motin" class="ev-double-checkbox ev-double-checkbox-pecados-0">Mot&iacute;n</div>
+							<div id="ev-pj-form-pecados-robo" class="ev-double-checkbox ev-double-checkbox-pecados-0">Robo</div>
+							<div id="ev-pj-form-pecados-sodomia" class="ev-double-checkbox ev-double-checkbox-pecados-0">Sodom&iacute;a</div>
+							<div id="ev-pj-form-pecados-violacion" class="ev-double-checkbox ev-double-checkbox-pecados-0">Violaci&oacute;n</div>
+						</div>
+						<div>Puedes contar dos veces un mismo pecado si tu personaje lo ha cometido de forma prolongada, constante, excesiva, sin remordimientos y a&uacute;n hoy contin&uacute;a haci&eacute;ndolo.</div>
+					</div>
+					<!-- infortunios -->
+					<div>
+						<h2>Infortunios</h2>
+						<div>¿Cu&aacute;les ha cometido tu personaje? Elige uno, algunos, todos o ninguno.</div>
+						<div>
+							<div id="ev-pj-form-infortunios-arrestado" class="ev-double-checkbox ev-double-checkbox-infortunios-0">Arrestado</div>
+							<div id="ev-pj-form-infortunios-condenado" class="ev-double-checkbox ev-double-checkbox-infortunios-0">Condenado</div>
+							<div id="ev-pj-form-infortunios-encarcelado" class="ev-double-checkbox ev-double-checkbox-infortunios-0">Encarcelado</div>
+							<div id="ev-pj-form-infortunios-intentodeasesinato" class="ev-double-checkbox ev-double-checkbox-infortunios-0">Intento de asesinato</div>
+							<div id="ev-pj-form-infortunios-latigazos" class="ev-double-checkbox ev-double-checkbox-infortunios-0">Latigazos</div>
+							<div id="ev-pj-form-infortunios-maldito" class="ev-double-checkbox ev-double-checkbox-infortunios-0">Maldito</div>
+							<div id="ev-pj-form-infortunios-marcado" class="ev-double-checkbox ev-double-checkbox-infortunios-0">Marcado</div>
+							<div id="ev-pj-form-infortunios-mutilado" class="ev-double-checkbox ev-double-checkbox-infortunios-0">Mutilado</div>
+							<div id="ev-pj-form-infortunios-paliza" class="ev-double-checkbox ev-double-checkbox-infortunios-0">Paliza</div>
+							<div id="ev-pj-form-infortunios-repudiado" class="ev-double-checkbox ev-double-checkbox-infortunios-0">Repudiado</div>
+							<div id="ev-pj-form-infortunios-reclutadoalafuerza" class="ev-double-checkbox ev-double-checkbox-infortunios-0">Reclutado a la fuerza</div>
+							<div id="ev-pj-form-infortunios-torturado" class="ev-double-checkbox ev-double-checkbox-infortunios-0">Torturado</div>
+							<div id="ev-pj-form-infortunios-violado" class="ev-double-checkbox ev-double-checkbox-infortunios-0">Violado</div>
+						</div>
+						<div>Marca con una X (pulsando dos veces) aquellas que tu personaje sufrió a manos del Capit&aacute;n Azufre Jack.</div>
+					</div>
+					<!-- ambiciones -->
+					<div>
+						<h2>Ambiciones</h2>
+						<div>¿Cu&aacute;les dan fuerza a tu personaje? Elige alguna, todas... pero al menos una.</div>
+						<div>
+							<div data-role="fieldcontain">
+						<!--	<legend>Ambiciones:</legend>	-->
+								<input type="checkbox" name="ev-pj-form-ambiciones-sercapitan" id="ev-pj-form-ambiciones-sercapitan" value="ser capitán" class="custom" />
+								<label for="ev-pj-form-ambiciones-sercapitan">Ser capit&aacute;n.</label>
+								<input type="checkbox" name="ev-pj-form-ambiciones-tenertierras" id="ev-pj-form-ambiciones-tenertierras" value="tener tierras" class="custom" />
+								<label for="ev-pj-form-ambiciones-tenertierras">Tener tierras.</label>
+								<input type="checkbox" name="ev-pj-form-ambiciones-serperdonado" id="ev-pj-form-ambiciones-serperdonado" value="ser perdonado" class="custom" />
+								<label for="ev-pj-form-ambiciones-serperdonado">Ser perdonado.</label>
+								<input type="checkbox" name="ev-pj-form-ambiciones-vivirparasiempre" id="ev-pj-form-ambiciones-vivirparasiempre" value="vivir para siempre" class="custom" />
+								<label for="ev-pj-form-ambiciones-vivirparasiempre">Vivir para siempre.</label>
+								<input type="checkbox" name="ev-pj-form-ambiciones-serrecordadoparasiempre" id="ev-pj-form-ambiciones-serrecordadoparasiempre" value="ser recordado para siempre" class="custom" />
+								<label for="ev-pj-form-ambiciones-serrecordadoparasiempre">Ser recordado para siempre.</label>
+								<input type="checkbox" name="ev-pj-form-ambiciones-seradmiradoporlasociedad" id="ev-pj-form-ambiciones-seradmiradoporlasociedad" value="ser admirado por la sociedad" class="custom" />
+								<label for="ev-pj-form-ambiciones-seradmiradoporlasociedad">Ser admirado por la sociedad.</label>
+								<input type="checkbox" name="ev-pj-form-ambiciones-vengarsedealguien" id="ev-pj-form-ambiciones-vengarsedealguien" value="vengarse de alguien" class="custom" />
+								<label for="ev-pj-form-ambiciones-vengarsedealguien">Vengarse de alguien.</label>
+								<input type="checkbox" name="ev-pj-form-ambiciones-vengarsedealguiendemejorposicion" id="ev-pj-form-ambiciones-vengarsedealguiendemejorposicion" value="vengarse de alguien de mejor posición" class="custom" />
+								<label for="ev-pj-form-ambiciones-vengarsedealguiendemejorposicion">Vengarse de alguien de mejor posici&oacute;n.</label>
+								<input type="checkbox" name="ev-pj-form-ambiciones-fornicarconelpiratadeotrojugador" id="ev-pj-form-ambiciones-fornicarconelpiratadeotrojugador" value="fornicar con el pirata de otro jugador" class="custom" />
+								<label for="ev-pj-form-ambiciones-fornicarconelpiratadeotrojugador">Fornicar con el pirata de otro jugador.</label>
+								<input type="checkbox" name="ev-pj-form-ambiciones-fornicarconhijaohijodealguiendemejorposicion" id="ev-pj-form-ambiciones-fornicarconhijaohijodealguiendemejorposicion" value="fornicar con hija o hijo de alguien de mejor posición" class="custom" />
+								<label for="ev-pj-form-ambiciones-fornicarconhijaohijodealguiendemejorposicion">Fornicar con hija o hijo de alguien de mejor posici&oacute;n.</label>
+								<input type="checkbox" name="ev-pj-form-ambiciones-escupiralacaradedios" id="ev-pj-form-ambiciones-escupiralacaradedios" value="escupir a la cara de dios" class="custom" />
+								<label for="ev-pj-form-ambiciones-escupiralacaradedios">Escupir a la cara de Dios.</label>
+								<input type="checkbox" name="ev-pj-form-ambiciones-escupiralacaradeldiablo" id="ev-pj-form-ambiciones-escupiralacaradeldiablo" value="escupir a la cara del diablo" class="custom" />
+								<label for="ev-pj-form-ambiciones-escupiralacaradeldiablo">Escupir a la cara del Diablo.</label>
+							</div>
+						</div>
+					</div>
+					<!-- perfil -->
+					<div>
+						<h2>Perfil</h2>
+						<div data-role="fieldcontain">
+							<legend>Posees cualquier combinaci&oacute;n de:</legend>
+							<input type="checkbox" name="ev-pj-form-perfil-cuchillo" id="ev-pj-form-perfil-cuchillo" value="cuchillo (largo y mellado)" class="custom" />
+							<label for="ev-pj-form-perfil-cuchillo">Cuchillo (largo y mellado)</label>
+							<input type="checkbox" name="ev-pj-form-perfil-espada" id="ev-pj-form-perfil-espada" value="espada" class="custom" />
+							<label for="ev-pj-form-perfil-espada">Espada</label>
+							<input type="checkbox" name="ev-pj-form-perfil-pistola" id="ev-pj-form-perfil-pistola" value="pistola" class="custom" />
+							<label for="ev-pj-form-perfil-pistola">Pistola</label>
+							<legend>Adem&aacute;s de eso, ¿cu&aacute;les de las siguientes armas tiene tu personaje a mano? Puedes elegir dos como m&aacute;ximo.</legend>
+							<select name="ev-pj-form-perfil-select1">
+								<option value="una segunda espada para la mano libre segun el uso de los florentinos">Una segunda espada, para la mano libre, seg&uacute;n el uso de los florentinos</option>
+								<option value="una bandolera con dos pistolas">Una bandolera con dos pistolas</option>
+								<option value="un arma de mano distintiva como un hacha, una porra, un latigo o el martillo de un herrero">Un arma de mano distintiva como un hacha, una porra, un l&aacute;tigo o el martillo de un herrero</option>
+								<option value="un largo mosquete de tirador">Un largo mosquete de tirador</option>
+								<option value="granadas">Granadas</option>
+								<option value="tu pirata es descomunalmente fuerte con puños como enormes rocas">No es un arma, pero tu pirata es descomunalmente fuerte, con puños como enormes rocas</option>
+								<option value="los tatuajes y la apariencia salvaje de tu pirata intimidan de por si">No es un arma, pero los tatuajes y la apariencia salvaje de tu pirata intimidan de por sí</option>
+								<option value="tu pirata es ligero, asombrosamente rapido, fibroso y cruel">No es un arma, pero tu pirata es ligero, asombrosamente r&aacute;pido, fibroso y cruel</option>
+							</select>
+							<select name="ev-pj-form-perfil-select2">
+								<option value="una segunda espada para la mano libre segun el uso de los florentinos">Una segunda espada, para la mano libre, seg&uacute;n el uso de los florentinos</option>
+								<option value="una bandolera con dos pistolas">Una bandolera con dos pistolas</option>
+								<option value="un arma de mano distintiva como un hacha, una porra, un latigo o el martillo de un herrero">Un arma de mano distintiva como un hacha, una porra, un l&aacute;tigo o el martillo de un herrero</option>
+								<option value="un largo mosquete de tirador">Un largo mosquete de tirador</option>
+								<option value="granadas">Granadas</option>
+								<option value="tu pirata es descomunalmente fuerte con puños como enormes rocas">No es un arma, pero tu pirata es descomunalmente fuerte, con puños como enormes rocas</option>
+								<option value="los tatuajes y la apariencia salvaje de tu pirata intimidan de por si">No es un arma, pero los tatuajes y la apariencia salvaje de tu pirata intimidan de por sí</option>
+								<option value="tu pirata es ligero, asombrosamente rapido, fibroso y cruel">No es un arma, pero tu pirata es ligero, asombrosamente r&aacute;pido, fibroso y cruel</option>
+							</select>
+						</div>
+					</div>
+					<!-- perfil mutilacion -->
+					<div id="ev-pj-div-mutilacion">
+						<h2>Perfil. Mutilaci&oacute;n.</h2>
+						<div data-role="fieldcontain">
+							<label for="ev-pj-form-mutilacion">Has escogido el infortunio "mutilaci&oacute;n". Elige una discapacidad como consecuencia.</label>
+							<select name="ev-pj-form-mutilacion-select">
+								<option value="le falta un brazo">Le falta un brazo</option>
+								<option value="ha perdido un ojo">Ha perdido un ojo</option>
+								<option value="le han rajado la lengua">Le han rajado la lengua</option>
+								<option value="tiene horribles cicatrices">Tiene horribles cicactrices</option>
+								<option value="otra">Otra</option>
+							</select>
+							<input type="text" name="ev-pj-form-mutilacion-input" />
+						</div>
+					</div>
+				</div>
+				<!-- footer -->
+				<div data-role="footer">
+					<a href="#ev-pj-resultados" class="ui-btn ui-btn-right">Resultado</a>
+				</div>
+		</div>
+
+		<!-- PJ resultados -->
+		<div data-role="page" id="ev-pj-resultados">
+				<!-- header -->
+				<div data-role="header">
+					<a href="#ev-main-panel" class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow">panel</a>
+					<h1>Creaci&oacute;n del personaje</h1>
+				</div>
+				<!-- main -->
+				<div data-role="main" class="ui-content">
+					<div id="ev-pj-resultado-nombre"></div>
+					<div id="ev-pj-resultado-cargo"></div>
+					<!-- pecados -->
+					<div>
+						<span>Pecados: </span>
+						<span id="ev-pj-resultado-pecados-adulterio"></span>
+						<span id="ev-pj-resultado-pecados-asesinato"></span>
+						<span id="ev-pj-resultado-pecados-blasfemia"></span>
+						<span id="ev-pj-resultado-pecados-idolatria"></span>
+						<span id="ev-pj-resultado-pecados-motin"></span>
+						<span id="ev-pj-resultado-pecados-robo"></span>
+						<span id="ev-pj-resultado-pecados-sodomia"></span>
+						<span id="ev-pj-resultado-pecados-violacion"></span>
+					</div>
+					<div>
+						<div>
+							<span>Diablo: </span>
+							<span id="ev-pj-resultado-diablo"></span>
+						</div>
+						<div>
+							<span>Alma: </span>
+							<span id="ev-pj-resultado-alma"></span>
+						</div>
+					</div>
+					<!-- infortunios -->
+					<div>
+						<span>Sufri&oacute;: </span>
+						<span id="ev-pj-resultado-infortunios-arrestado"></span>
+						<span id="ev-pj-resultado-infortunios-condenado"></span>
+						<span id="ev-pj-resultado-infortunios-encarcelado"></span>
+						<span id="ev-pj-resultado-infortunios-intentodeasesinato"></span>
+						<span id="ev-pj-resultado-infortunios-latigazos"></span>
+						<span id="ev-pj-resultado-infortunios-maldito"></span>
+						<span id="ev-pj-resultado-infortunios-marcado"></span>
+						<span id="ev-pj-resultado-infortunios-mutilado"></span>
+						<span id="ev-pj-resultado-infortunios-paliza"></span>
+						<span id="ev-pj-resultado-infortunios-repudiado"></span>
+						<span id="ev-pj-resultado-infortunios-reclutadoalafuerza"></span>
+						<span id="ev-pj-resultado-infortunios-torturado"></span>
+						<span id="ev-pj-resultado-infortunios-violado"></span>
+					</div>
+					<div>
+						<div id="ev-pj-resultado-xxx"></div>
+						<div>
+							<span>Brutalidad: </span>
+							<span id="ev-pj-resultado-brutalidad"></span>
+						</div>
+					</div>
+					<!-- ambiciones -->
+					<div>
+						<span>Ambiciones: </span>
+						<span id="ev-pj-resultado-ambiciones-sercapitan"></span>
+						<span id="ev-pj-resultado-ambiciones-tenertierras"></span>
+						<span id="ev-pj-resultado-ambiciones-serperdonado"></span>
+						<span id="ev-pj-resultado-ambiciones-vivirparasiempre"></span>
+						<span id="ev-pj-resultado-ambiciones-serrecordadoparasiempre"></span>
+						<span id="ev-pj-resultado-ambiciones-seradmiradoporlasociedad"></span>
+						<span id="ev-pj-resultado-ambiciones-vengarsedealguien"></span>
+						<span id="ev-pj-resultado-ambiciones-vengarsedealguiendemejorposicion"></span>
+						<span id="ev-pj-resultado-ambiciones-fornicarconelpiratadeotrojugador"></span>
+						<span id="ev-pj-resultado-ambiciones-fornicarconhijaohijodealguiendemejorposicion"></span>
+						<span id="ev-pj-resultado-ambiciones-escupiralacaradedios"></span>
+						<span id="ev-pj-resultado-ambiciones-escupiralacaradeldiablo"></span>
+					</div>
+					<div>
+						<div>
+							<span>Ambici&oacute;n: </span>
+							<span id="ev-pj-resultado-ambicion"></span>
+						</div>
+						<div>
+							<span>Temeridad: </span>
+							<span id="ev-pj-resultado-temeridad"></span>
+						</div>
+					</div>
+					<!-- perfil -->
+					<div>
+						<span>Voy armado con </span>
+						<span id="ev-pj-resultado-perfil-cuchillo"></span>
+						<span id="ev-pj-resultado-perfil-espada"></span>
+						<span id="ev-pj-resultado-perfil-pistola"></span>
+						<span id="ev-pj-resultado-perfil-select1"></span>
+						<span id="ev-pj-resultado-perfil-select2"></span>
+					</div>
+					<div>
+						<div>
+							<span>Perfil: </span>
+							<span id="ev-pj-resultado-perfil-puntosperfil"></span>
+						</div>
+					</div>
+				</div>
+				<!-- footer -->
+				<div data-role="footer">
+					<a href="#ev-pj" class="ui-btn ui-btn-left">Volver</a>
+				</div>
+		</div>
+
+
+		<!-- ########  DAGA Y TRIPULAC.  ######## -->
+		<div data-role="page" id="ev-daga-tripulacion">
+				<!-- header -->
+				<div data-role="header">
+					<a href="#ev-main-panel" class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow">panel</a>
+					<h1>Creaci&oacute;n de la Daga</h1>
+				</div>
+				<!-- main -->
+				<div data-role="main" class="ui-content">
+					<!-- la daga -->
+					<div>
+						<h2>La Daga</h2>
+						<div>La Daga es un balandro de tipo bermuda, con dos m&aacute;stiles. Por defecto tine 16 ca&ntilde;ones de 4 y 6 libras y una tripulaci&oacute;n de 80 hombres.</div>
+						<div>Elegid dos cosas que sean ciertas:</div>
+						<select name="ev-dt-daga-form-select1">
+							<option value="es r&aacute;pida">Es r&aacute;pida</option>
+							<option value="infunde temor">Infunde temor</option>
+							<option value="es afortunada">Es afortunada</option>
+							<option value="tiene una macabra reputacion">Tiene una macabra reputaci&oacute;n</option>
+							<option value="esta fuertemente armada">Est&aacute; fuertemente armada (20 ca&ntilde;ones, incluyendo cuatro de 8 libras)</option>
+							<option value="es muy maniobrable">Es muy maniobrable</option>
+							<option value="es de solida manufactura">Es de s&oacute;lida manufactura</option>
+						</select>
+						<select name="ev-dt-daga-form-select2">
+							<option value="es rapida">Es r&aacute;pida</option>
+							<option value="infunde temor">Infunde temor</option>
+							<option value="es afortunada">Es afortunada</option>
+							<option value="tiene una macabra reputacion">Tiene una macabra reputaci&oacute;n</option>
+							<option value="esta fuertemente armada">Est&aacute; fuertemente armada (20 ca&ntilde;ones, incluyendo cuatro de 8 libras)</option>
+							<option value="es muy maniobrable">Es muy maniobrable</option>
+							<option value="es de solida manufactura">Es de s&oacute;lida manufactura</option>
+						</select>
+						<div>Por &uacute;ltimo, elegid el punto fuerte de la daga</div>
+						<select name="ev-dt-daga-form-puntofuerte">
+							<option value="perseguir y escapar">Perseguir y escapar</option>
+							<option value="canon contra canon">Cañon contra cañon</option>
+							<option value="borda contra borda">Borda contra borda</option>
+							<option value="abordar y repeler abordajes">Abordar y repeler abordajes</option>
+						</select>
+					</div>
+					<!-- tripulacion -->
+					<div>
+						<h2>La Daga. Tripulaci&oacute;n</h2>
+						<div>Elegid dos que sean ciertas:</div>
+						<select name="ev-dt-tripulacion-form-select1">
+							<option value="es grande (110 almas)">Es grande (110 almas)</option>
+							<option value="sus miembros son, en su mayoria, depravados asesinos">Sus miembros son, en su mayor&iacute;a, depravados asesinos</option>
+							<option value="sus miembros han navegado juntos durante muchos años">Sus miembros han navegado juntos durante muchos años</option>
+							<option value="estan bien armados y ansiosos por luchar">Est&aacute;n bien armados y ansiosos por luchar</option>
+							<option value="han sido entrenados para luchar codo con codo">Han sido entrenados para luchar codo con codo</option>
+						</select>
+						<select name="ev-dt-tripulacion-form-select2">
+							<option value="es grande (110 almas)">Es grande (110 almas)</option>
+							<option value="sus miembros son, en su mayoria, depravados asesinos">Sus miembros son, en su mayor&iacute;a, depravados asesinos</option>
+							<option value="sus miembros han navegado juntos durante muchos años">Sus miembros han navegado juntos durante muchos años</option>
+							<option value="estan bien armados y ansiosos por luchar">Est&aacute;n bien armados y ansiosos por luchar</option>
+							<option value="han sido entrenados para luchar codo con codo">Han sido entrenados para luchar codo con codo</option>
+						</select>
+						<div>Por &uacute;ltimo, elegid el punto fuerte de La Daga:</div>
+						<select name="ev-dt-tripulacion-form-select3">
+							<option value="apenas son suficientes para gobernar el barco">Apenas son suficientes para gobernar el barco</option>
+							<option value="no existe una lengua en comun a bordo, en su lugar confian en el pidgin y su intuicion">No existe una lengua en com&uacute;n a bordo, en su lugar conf&iacute;an en el pidgin y su intuici&oacute;n</option>
+							<option value="la tripulacion fue bastante maltratada por Azufre Jack">La tripulaci&oacute;n fue bastante maltratada por Azufre Jack</option>
+							<option value="su relacion esta plagada de mezquinas rivalidades y punaladas traperas">Su relaci&oacute;n esta plagada de mezquinas rivalidades y pu&ntilde;aladas traperas</option>
+							<option value="sus miembros son en su mayoria vagos y borrachos">Sus miembros son en su mayor&iacute;a, vagos y borrachos</option>
+							<option value="no lucharan a menos que sean amenazados o dirigidos con firmeza">No luchar&aacute;n a menos que sean amenazados o dirigidos con firmeza</option>
+						</select>
+					</div>
+				</div>
+				<!-- footer -->
+				<div data-role="footer">
+					<a href="#ev-daga-tripulacion-resultados" class="ui-btn ui-btn-right">Resultado</a>
+				</div>
+		</div>
+
+		<!-- DAGA Y TRIPUL. resultados -->
+		<div data-role="page" id="ev-daga-tripulacion-resultados">
+				<!-- header -->
+				<div data-role="header">
+					<a href="#ev-main-panel" class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow">panel</a>
+					<h1>Creaci&oacute;n de la Daga</h1>
+				</div>
+				<!-- main -->
+				<div data-role="main" class="ui-content">
+					<h2>La Daga</h2>
+					<div>La Daga es un balandro de tipo bermuda, con dos m&aacute;stiles. Por defecto tiene 16 ca&ntilde;ones de 4 y 6 libras y una tripulaci&oacute;n de 80 hombres.</div>
+					<div>
+						<span id="ev-dt-daga-resultado-select1"></span>, 
+						<span id="ev-dt-daga-resultado-select2"></span>.
+					</div>
+					<div id="ev-dt-daga-resultado-perfildelbarco"><span>Perfil del barco</span> 10</div>
+					<div>El punto fuerte de La Daga es <span id="ev-dt-daga-resultado-puntofuerte"></span>.</div>
+					<div>La tripulaci&oacute;n <span id="ev-dt-tripulacion-resultado-select1"></span> y <span id="ev-dt-tripulacion-resultado-select2"></span>.</div>
+					<div>Adem&aacute;s <span id="ev-dt-tripulacion-resultado-select3"></span>.</div>
+					<div id="ev-dt-daga-resultado-perfildelbarco"><span>Perfil de la tripulaci&oacute;n</span> 6</div>
+				</div>
+				<!-- footer -->
+				<div data-role="footer">
+					<a href="#ev-daga-tripulacion" class="ui-btn ui-btn-left">Volver</a>
+				</div>
+		</div>
+
+
+	</body>
+
+</html>
+

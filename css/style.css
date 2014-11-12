@@ -1,0 +1,17 @@
+
+/* ---- */
+.ev-double-checkbox {
+	padding-left: 22px;
+	cursor: pointer;
+}
+
+.ev-double-checkbox-pecados-0 { background: url('../img/double-checkbox_pecados_0.png') no-repeat; background-size: 18px 100%; }
+.ev-double-checkbox-pecados-1 { background: url('../img/double-checkbox_pecados_1.png') no-repeat; background-size: 18px 100%; }
+.ev-double-checkbox-pecados-2 { background: url('../img/double-checkbox_pecados_2.png') no-repeat; background-size: 18px 100%; }
+
+.ev-double-checkbox-infortunios-0 { background: url('../img/double-checkbox_infortunios_0.png') no-repeat; background-size: 18px 100%; }
+.ev-double-checkbox-infortunios-1 { background: url('../img/double-checkbox_infortunios_1.png') no-repeat; background-size: 18px 100%; }
+.ev-double-checkbox-infortunios-2 { background: url('../img/double-checkbox_infortunios_2.png') no-repeat; background-size: 18px 100%; }
+
+#ev-pj-div-mutilacion { display: block; }
+
